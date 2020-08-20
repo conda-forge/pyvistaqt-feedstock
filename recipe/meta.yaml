@@ -1,5 +1,5 @@
 {% set name = "pyvistaqt" %}
-{% set version = "0.1.1" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: f1ce35b8ec55c330d95b24f09aa96ae3fb854e536dfe44b90243dcf81b5e3237
+  sha256: fbc9053c7b7d6e643b48f7d9a0e9e7feb679ff467025db546e9cb3f63cf6eab8
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -32,7 +32,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'A helper module for pyvista to enable you to plot using pyqt'
+  summary: A helper module for pyvista to enable you to plot using pyqt
   doc_url: http://qtdocs.pyvista.org
 
 extra:
