@@ -5,11 +5,11 @@ Home: https://github.com/pyvista/pyvistaqt
 
 Package license: MIT
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pyvistaqt-feedstock/blob/master/LICENSE.txt)
 
 Summary: A helper module for pyvista to enable you to plot using pyqt
 
-
+Documentation: http://qtdocs.pyvista.org
 
 Current build status
 ====================
