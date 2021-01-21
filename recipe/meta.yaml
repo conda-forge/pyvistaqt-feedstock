@@ -1,5 +1,5 @@
 {% set name = "pyvistaqt" %}
-{% set version = "0.2.0" %}
+{% set version = "0.3.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: fbc9053c7b7d6e643b48f7d9a0e9e7feb679ff467025db546e9cb3f63cf6eab8
+  sha256: 6cb8e64b4ec2bb2846af16a97c45cf62bc8a03019d2a201480737fb70f70aa9e
 
 build:
   noarch: python
@@ -16,12 +16,14 @@ build:
 
 requirements:
   host:
-    - python >=3.5
+    - python >=3.6
     - pip
   run:
-    - python >=3.5
+    - python >=3.6
     - pyvista >=0.25.0
     - pyqt >=5.11.3
+    - qtpy >=1.9.0
+    - imageio >=2.5.0
 
 test:
   imports:
