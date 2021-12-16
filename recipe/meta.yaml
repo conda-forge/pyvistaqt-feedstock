@@ -21,7 +21,6 @@ requirements:
   run:
     - python >=3.6
     - pyvista >=0.25.0
-    - pyqt >=5.11.3
     - qtpy >=1.9.0
     - imageio >=2.5.0
 
