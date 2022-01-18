@@ -1,5 +1,5 @@
 {% set name = "pyvistaqt" %}
-{% set version = "0.6.0" %}
+{% set version = "0.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,11 +7,11 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 6911a58719974c12ff5640d9c22f18ffd204fd0efcc0418d80068e85ed676703
+  sha256: d7b139a6fad2b358e5592b55af83de4500d15219d93fdbfa3fc5c72f947e4091
 
 build:
   noarch: python
-  number: 1
+  number: 0
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
