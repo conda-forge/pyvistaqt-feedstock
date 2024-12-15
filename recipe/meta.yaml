@@ -6,22 +6,22 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
   sha256: 5403bfeb82cf063288107a9be9780ca3ca70948e73d33d16a65a83a711d51a36
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.6
+    - python {{ python_min }}
     - pip
     - setuptools >=45
     - setuptools_scm >=6.2
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - pyvista >=0.32.0
     - qtpy >=1.9.0
     - imageio >=2.5.0
@@ -33,6 +33,7 @@ test:
     - python -c "from packaging.version import parse; import pyvistaqt; assert parse(pyvistaqt.__version__) == parse('{{ version }}'), pyvistaqt.__version__"
   requires:
     - packaging
+    - python {{ python_min }}
 
 about:
   home: https://github.com/pyvista/pyvistaqt
