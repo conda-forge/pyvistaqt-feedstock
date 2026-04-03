@@ -1,5 +1,5 @@
 {% set name = "pyvistaqt" %}
-{% set version = "0.11.3" %}
+{% set version = "0.11.4" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   number: 0
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . -vv  --no-deps --no-build-isolation
 
 requirements:
   host:
@@ -22,7 +22,7 @@ requirements:
     - setuptools_scm >=6.2
   run:
     - python >={{ python_min }}
-    - pyvista >=0.32.0
+    - pyvista >=0.39.0
     - qtpy >=1.9.0
     - imageio >=2.5.0
 
