@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b45cceaee5013a9f98fec3c5de175f5af897f3a6c558bf65c600a0812c20beba
+  sha256: b2bc92ac34e2bbd729c55fb27719684d4b518a593fce9c877621020d050b4bd5
 
 build:
   noarch: python
+  script: {{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
   number: 0
-  script: {{ PYTHON }} -m pip install . -vv  --no-deps --no-build-isolation
 
 requirements:
   host:
@@ -24,7 +24,6 @@ requirements:
     - python >={{ python_min }}
     - pyvista >=0.39.0
     - qtpy >=1.9.0
-    - imageio >=2.5.0
 
 test:
   imports:
