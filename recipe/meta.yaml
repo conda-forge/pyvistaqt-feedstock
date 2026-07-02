@@ -1,5 +1,5 @@
 {% set name = "pyvistaqt" %}
-{% set version = "0.11.4" %}
+{% set version = "0.12.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: b2bc92ac34e2bbd729c55fb27719684d4b518a593fce9c877621020d050b4bd5
+  sha256: 95d4c0588186b4febb98fb337794abf54829ace2588e37deede576db515bbc38
 
 build:
   noarch: python
@@ -22,7 +22,7 @@ requirements:
     - setuptools_scm >=6.2
   run:
     - python >={{ python_min }}
-    - pyvista >=0.39.0
+    - pyvista >=0.43.7
     - qtpy >=1.9.0
 
 test:
