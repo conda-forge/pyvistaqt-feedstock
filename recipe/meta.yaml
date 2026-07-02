@@ -33,6 +33,7 @@ test:
   requires:
     - packaging
     - python {{ python_min }}
+    - pyside6
 
 about:
   home: https://github.com/pyvista/pyvistaqt
