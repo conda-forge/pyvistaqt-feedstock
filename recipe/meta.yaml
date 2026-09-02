@@ -1,13 +1,13 @@
 {% set name = "pyvistaqt" %}
-{% set version = "0.12.0" %}
+{% set version = "0.13.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 95d4c0588186b4febb98fb337794abf54829ace2588e37deede576db515bbc38
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: fb8efda9289fc1b6456b04b1ed1497c02b8178d634fbb5e832134a2f6b46be6e
 
 build:
   noarch: python
