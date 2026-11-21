@@ -1,5 +1,5 @@
 {% set name = "pyvistaqt" %}
-{% set version = "0.14.0" %}
+{% set version = "0.14.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 69f04257f484d43070ac3902d09d8bea78a22fda9adcbc5447a5152bb537ee16
+  sha256: 704377a48aa2736a5bbd1572aafd31f9af72aff2f45e5dcc07167a07ab81bca9
 
 build:
   noarch: python
